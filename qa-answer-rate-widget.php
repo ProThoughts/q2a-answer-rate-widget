@@ -76,10 +76,10 @@ class qa_answer_rate_widget {
 		// answer rate
 		$answer_rate = 0;
 		if ($q_count > 0) {
-			$answer_rate = round($a_count * 100 / $q_count);
+			$answer_rate = round($a_count * 100 / $q_count, 1);
 		}
 
-		$themeobject->output('<p class="qa-activity-count-item">'. qa_lang_html('qa_answer_rate_widget_lang/answer_rate'));
+		$themeobject->output('<p class="qa-activity-count-item">'. qa_lang_html('qa_answer_rate_widget_lang/answer_rate') . '</p>');
 		$themeobject->output('<span class="qa-activity-count-data">　　' . $answer_rate . '%</span></p>');
 
 		// get average time
